@@ -5,6 +5,7 @@ from email.utils import parsedate_to_datetime
 import time
 from datetime import datetime
 from typing import Optional, Dict, List
+import argparse
 
 def parse_date(date_string: str) -> Optional[str]:
     """Parse date string to ISO format."""
@@ -59,6 +60,9 @@ def mbox_to_json(mbox_file: str, json_file: str) -> None:
     print(f"JSON conversion completed in {end_time - start_time:.2f} seconds.")
 
 if __name__ == "__main__":
-    mbox_file = "mail.mbox"
-    json_file = "mail_output.json"
-    mbox_to_json(mbox_file, json_file)
+    parser = argparse.ArgumentParser(description="Convert mbox file to JSON")
+    parser.add_argument("-i", "--input", default="mail.mbox", help="Input mbox file (default: mail.mbox)")
+    parser.add_argument("-o", "--output", default="mail_output.json", help="Output JSON file (default: mail_output.json)")
+    args = parser.parse_args()
+
+    mbox_to_json(args.input, args.output)
