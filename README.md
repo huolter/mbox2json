@@ -39,11 +39,6 @@ The resulting JSON file can be easily processed for various purposes, including:
       ```
       This allows you to specify custom input and output files.
 
-   c. With partial command-line arguments:
-      ```
-      python mbox_to_json_converter.py -i custom_input.mbox
-      ```
-      This will use the specified input file and the default output file name.
 
 3. The script will generate a JSON file containing your email data.
 
