@@ -54,5 +54,8 @@ The resulting JSON file can be easily processed for various purposes, including:
 
 ## Note
 
-This tool is intended for personal use or research purposes. Ensure you comply with relevant data protection regulations when processing email data, especially if it contains personal information. Be careful :-)
+Ensure you comply with relevant data protection regulations when processing email data, especially if it contains personal information. Be careful :-)
 
+## License
+
+This project is licensed under the [MIT License](LICENSE).
